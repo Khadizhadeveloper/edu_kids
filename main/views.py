@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
-from .models import Course, Student, Teacher
+from .models import Course, Teacher
 from .forms import StudentForm
 
 
