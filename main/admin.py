@@ -54,14 +54,14 @@ class TeacherAdmin(admin.ModelAdmin):
     display_photo.short_description = 'Фото'
 
 
-# Кастомная админка для лучшего отображения
+
 class OkurmenKidsAdminSite(admin.AdminSite):
     site_header = "Okurmen Kids Administration"
     site_title = "Okurmen Kids Admin Portal"
     index_title = "Добро пожаловать в систему управления"
 
     def index(self, request, extra_context=None):
-        # Статистика для главной страницы админки
+
         from django.db.models import Count
         extra_context = extra_context or {}
 
