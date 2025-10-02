@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',  # Должно быть первым!
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'main',
 ]
 
-# Настройки Jazzmin
+
 JAZZMIN_SETTINGS = {
-    # Заголовок сайта
+
     "site_title": "Okurmen Kids Admin",
     "site_header": "Okurmen Kids",
     "site_brand": "Okurmen Kids",
@@ -53,30 +53,29 @@ JAZZMIN_SETTINGS = {
     "site_logo_classes": "img-circle",
     "site_icon": None,
 
-    # Цвета темы
     "theme": "default",
     "dark_mode_theme": "darkly",
 
-    # Логотип на странице входа
+
     "login_logo": None,
 
-    # Добро пожаловать текст
+
     "welcome_sign": "Добро пожаловать в панель управления Okurmen Kids",
 
-    # Copyright
+
     "copyright": "Okurmen Kids",
 
-    # Поиск
+
     "search_model": ["auth.User", "main.Student"],
 
-    # Навигация
+
     "topmenu_links": [
         {"name": "Главная сайта", "url": "{% url 'home' %}", "permissions": ["auth.view_user"]},
         {"model": "auth.User"},
         {"app": "main"},
     ],
 
-    # Иконки приложений
+
     "icons": {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
@@ -86,20 +85,19 @@ JAZZMIN_SETTINGS = {
         "main.Teacher": "fas fa-chalkboard-teacher",
     },
 
-    # Иконки по умолчанию
+
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
 
-    # Сайдбар
     "show_sidebar": True,
     "navigation_expanded": True,
     "hide_apps": [],
     "hide_models": [],
 
-    # Порядок приложений
+
     "order_with_respect_to": ["main", "auth"],
 
-    # Кастомные ссылки
+
     "custom_links": {
         "main": [{
             "name": "Статистика",
@@ -109,30 +107,30 @@ JAZZMIN_SETTINGS = {
         }]
     },
 
-    # Права доступа
+
     "permissions": {
         "custom_links": ["auth.view_user"],
     },
 
-    # Кастомный CSS/JS
+
     "custom_css": None,
     "custom_js": None,
 
-    # Показывать UI настроек
+
     "show_ui_builder": True,
 
-    # Смена темы
+
     "changeform_format": "horizontal_tabs",
     "changeform_format_overrides": {
         "auth.user": "collapsible",
         "auth.group": "vertical_tabs"
     },
 
-    # Язык
+
     "language_chooser": False,
 }
 
-# Настройки UI Builder (опционально)
+
 JAZZMIN_UI_TWEAKS = {
     "navbar_small_text": False,
     "footer_small_text": False,
