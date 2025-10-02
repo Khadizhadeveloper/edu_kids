@@ -9,8 +9,8 @@ class Course(models.Model):
     ]
 
     title = models.CharField(max_length=200, verbose_name='Название курса')
-    description = models.TextField(verbose_name='Описание')
-    duration = models.CharField(max_length=100, verbose_name='Длительность')
+    description = models.TextField(verbose_name='Описание курса')
+    duration = models.CharField(max_length=100, verbose_name='Длительность курса')
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена')
     level = models.CharField(max_length=20, choices=LEVEL_CHOICES, verbose_name='Уровень')
     image = models.ImageField(upload_to='courses/', verbose_name='Изображение')
